@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.3.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intent View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="IntentViewController" customModule="GitHubUserIntentUI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="BmO-Zk-3Ln">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ihc-Uk-4IX">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your GitHub Stats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BG5-0O-sAL">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnr-7Z-gey">
+                                        <rect key="frame" x="0.0" y="50" width="320" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sd9-pP-Mvn">
+                                        <rect key="frame" x="0.0" y="100" width="320" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BmO-Zk-3Ln" firstAttribute="trailing" secondItem="4PN-XC-lEE" secondAttribute="trailing" id="DAO-G9-kj9"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="bottom" secondItem="BmO-Zk-3Ln" secondAttribute="bottom" id="GHG-cL-uI2"/>
+                            <constraint firstItem="BmO-Zk-3Ln" firstAttribute="top" secondItem="4PN-XC-lEE" secondAttribute="top" id="JVm-GG-0z1"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="bottom" secondItem="ihc-Uk-4IX" secondAttribute="bottom" id="XXc-Fl-BIn"/>
+                            <constraint firstItem="ihc-Uk-4IX" firstAttribute="top" secondItem="4PN-XC-lEE" secondAttribute="top" id="al2-6e-ZgM"/>
+                            <constraint firstItem="4PN-XC-lEE" firstAttribute="trailing" secondItem="ihc-Uk-4IX" secondAttribute="trailing" id="dTi-ai-xVb"/>
+                            <constraint firstItem="ihc-Uk-4IX" firstAttribute="leading" secondItem="4PN-XC-lEE" secondAttribute="leading" id="gO0-nn-a1F"/>
+                            <constraint firstItem="BmO-Zk-3Ln" firstAttribute="leading" secondItem="4PN-XC-lEE" secondAttribute="leading" id="lCZ-YT-EXR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4PN-XC-lEE"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="BmO-Zk-3Ln" id="o4L-iB-fYA"/>
+                        <outlet property="followersLabel" destination="Sd9-pP-Mvn" id="n2X-2x-YzB"/>
+                        <outlet property="reposLabel" destination="xnr-7Z-gey" id="M1m-7n-tiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.40000000000001" y="133.13343328335833"/>
+        </scene>
+    </scenes>
+</document>
